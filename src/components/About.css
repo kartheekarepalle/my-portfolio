@@ -1,0 +1,189 @@
+/* ===== About Section ===== */
+.about-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-float-shapes {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.float-shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+}
+
+.shape-1 {
+  width: 350px; height: 350px;
+  background: rgba(168,85,247,0.06);
+  top: 10%; right: -5%;
+  animation: orbFloat 22s ease-in-out infinite;
+}
+
+.shape-2 {
+  width: 250px; height: 250px;
+  background: rgba(124,58,237,0.05);
+  bottom: 10%; left: -5%;
+  animation: orbFloat 18s ease-in-out infinite reverse;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 50px;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Image */
+.about-img {
+  text-align: center;
+  position: relative;
+}
+
+.about-img-frame {
+  position: relative;
+  display: inline-block;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.about-img-frame img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 10px 40px rgba(168,85,247,0.15);
+  transition: transform 0.5s ease;
+  border: 1px solid rgba(168,85,247,0.1);
+}
+
+.about-img-frame:hover img {
+  transform: scale(1.03);
+}
+
+.about-img-glow {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 60%;
+  background: linear-gradient(to top, rgba(168,85,247,0.1), transparent);
+  pointer-events: none;
+}
+
+.about-experience-badge {
+  position: absolute;
+  bottom: -20px; right: -10px;
+  padding: 14px 20px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  animation: floatBadge 3s ease-in-out infinite;
+}
+
+.badge-number {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.badge-text {
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@keyframes floatBadge {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Content */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.about-card {
+  padding: 26px 30px;
+  border-radius: 18px;
+}
+
+.about-heading {
+  color: var(--accent);
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.about-heading i {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.about-card p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+/* Languages */
+.about-languages {
+  margin-top: 4px;
+}
+
+.about-languages h4 {
+  color: var(--text);
+  font-size: 1rem;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.language-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.language-chip {
+  padding: 8px 20px;
+  border-radius: 50px;
+  background: rgba(168,85,247,0.08);
+  color: var(--accent-3);
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid rgba(168,85,247,0.12);
+  transition: all 0.3s ease;
+}
+
+.language-chip:hover {
+  background: rgba(168,85,247,0.18);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(168,85,247,0.15);
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about-experience-badge {
+    right: 10px;
+    bottom: -15px;
+  }
+}
