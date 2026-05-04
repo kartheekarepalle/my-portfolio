@@ -19,14 +19,14 @@
 
 .shape-1 {
   width: 350px; height: 350px;
-  background: rgba(168,85,247,0.06);
+  background: rgba(177,108,255,0.08);
   top: 10%; right: -5%;
   animation: orbFloat 22s ease-in-out infinite;
 }
 
 .shape-2 {
   width: 250px; height: 250px;
-  background: rgba(124,58,237,0.05);
+  background: rgba(34,211,238,0.06);
   bottom: 10%; left: -5%;
   animation: orbFloat 18s ease-in-out infinite reverse;
 }
@@ -61,9 +61,9 @@
   height: auto;
   border-radius: 20px;
   object-fit: cover;
-  box-shadow: 0 10px 40px rgba(168,85,247,0.15);
-  transition: transform 0.5s ease;
-  border: 1px solid rgba(168,85,247,0.1);
+  box-shadow: 0 10px 40px rgba(177,108,255,0.2), 0 0 60px rgba(34,211,238,0.08);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  border: 1px solid rgba(177,108,255,0.15);
 }
 
 .about-img-frame:hover img {
@@ -74,7 +74,7 @@
   position: absolute;
   bottom: 0; left: 0; right: 0;
   height: 60%;
-  background: linear-gradient(to top, rgba(168,85,247,0.1), transparent);
+  background: linear-gradient(to top, rgba(177,108,255,0.12), rgba(34,211,238,0.04), transparent);
   pointer-events: none;
 }
 
@@ -121,7 +121,7 @@
 }
 
 .about-heading {
-  color: var(--accent);
+  color: var(--accent-3);
   font-size: 1.15rem;
   margin-bottom: 10px;
   font-weight: 600;
@@ -131,9 +131,13 @@
 }
 
 .about-heading i {
-  font-size: 1rem;
-  opacity: 0.8;
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
+
+
 
 .about-card p {
   font-size: 1rem;
@@ -162,18 +166,19 @@
 .language-chip {
   padding: 8px 20px;
   border-radius: 50px;
-  background: rgba(168,85,247,0.08);
+  background: linear-gradient(135deg, rgba(177,108,255,0.08), rgba(34,211,238,0.04));
   color: var(--accent-3);
   font-size: 0.85rem;
   font-weight: 500;
-  border: 1px solid rgba(168,85,247,0.12);
+  border: 1px solid rgba(177,108,255,0.15);
   transition: all 0.3s ease;
 }
 
 .language-chip:hover {
-  background: rgba(168,85,247,0.18);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(168,85,247,0.15);
+  background: linear-gradient(135deg, rgba(177,108,255,0.2), rgba(34,211,238,0.1));
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(177,108,255,0.2);
+  border-color: rgba(177,108,255,0.3);
 }
 
 @media (max-width: 768px) {

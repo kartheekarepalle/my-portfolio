@@ -3,6 +3,21 @@ import './Internship.css';
 
 const internships = [
   {
+    role: 'Software Development Engineer (SDE) Intern',
+    company: 'Bluestock Fintech',
+    location: '—',
+    period: 'Jan 2026 – Feb 2026',
+    icon: 'fas fa-database',
+    details: [
+      'Developed and optimized backend APIs to improve application performance and scalability',
+      'Worked on debugging and resolving real-time issues in production-level systems',
+      'Collaborated with team members in Agile workflows including sprint planning and code reviews',
+      'Contributed to building reliable and maintainable web application features',
+    ],
+    tags: ['Python', 'FastAPI', 'REST APIs', 'SQL', 'Git', 'Backend Development'],
+    documents: [],
+  },
+  {
     role: 'Software Engineer Intern',
     company: 'YugaYatra Retail OPC Pvt. Limited',
     location: 'Bengaluru',

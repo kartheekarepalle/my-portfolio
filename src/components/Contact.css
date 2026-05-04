@@ -1,7 +1,7 @@
 /* ===== Contact Section ===== */
 .contact-section {
   padding: 100px 5%;
-  background: var(--panel-2);
+  background: linear-gradient(180deg, var(--bg), var(--panel-2));
   position: relative;
   overflow: hidden;
 }
@@ -15,9 +15,13 @@
 .contact-particle {
   position: absolute;
   width: 4px; height: 4px;
-  background: rgba(168,85,247,0.25);
+  background: rgba(177,108,255,0.3);
   border-radius: 50%;
   animation: particleFloat linear infinite;
+}
+
+.contact-particle:nth-child(2n) {
+  background: rgba(34,211,238,0.25);
 }
 
 .contact-wrapper {
@@ -65,22 +69,23 @@
 .contact-detail-icon {
   width: 46px; height: 46px;
   border-radius: 12px;
-  background: rgba(168,85,247,0.08);
+  background: linear-gradient(135deg, rgba(177,108,255,0.08), rgba(34,211,238,0.04));
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--accent);
+  color: var(--accent-3);
   font-size: 1rem;
   flex-shrink: 0;
   transition: all 0.3s ease;
-  border: 1px solid rgba(168,85,247,0.1);
+  border: 1px solid rgba(177,108,255,0.12);
 }
 
 .contact-detail-item:hover .contact-detail-icon {
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  background: linear-gradient(135deg, var(--accent), var(--accent-cyan));
   color: #fff;
   transform: scale(1.05);
   border-color: transparent;
+  box-shadow: 0 4px 15px rgba(177,108,255,0.3);
 }
 
 .contact-detail-item h4 {
@@ -116,14 +121,14 @@
 .form-icon {
   width: 44px; height: 44px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  background: linear-gradient(135deg, var(--accent), var(--accent-cyan));
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
   font-size: 1rem;
   margin: 0 auto;
-  box-shadow: 0 4px 15px rgba(168,85,247,0.25);
+  box-shadow: 0 4px 15px rgba(177,108,255,0.3);
 }
 
 .input-group {
@@ -136,7 +141,7 @@
   width: 100%;
   padding: 14px 14px 14px 46px;
   background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(168,85,247,0.08);
+  border: 1px solid rgba(177,108,255,0.1);
   border-radius: 12px;
   color: var(--text);
   font-size: 0.93rem;
@@ -147,9 +152,9 @@
 .input-group input:focus,
 .input-group textarea:focus {
   outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 20px rgba(168,85,247,0.1);
-  background: rgba(168,85,247,0.02);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 20px rgba(34,211,238,0.1), 0 0 10px rgba(177,108,255,0.08);
+  background: rgba(177,108,255,0.02);
 }
 
 .input-group textarea {

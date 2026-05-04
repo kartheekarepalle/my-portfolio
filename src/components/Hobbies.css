@@ -33,7 +33,7 @@
 
 .hobby-card:hover {
   transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 20px 50px rgba(168, 85, 247, 0.15);
+  box-shadow: 0 20px 50px rgba(177, 108, 255, 0.18), 0 0 30px rgba(34,211,238,0.06);
 }
 
 .hobby-icon-bg {

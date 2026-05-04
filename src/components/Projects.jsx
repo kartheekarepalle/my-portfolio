@@ -15,12 +15,14 @@ const projects = [
   {
     title: 'AI-Powered Mock Interview Platform',
     period: 'Nov 2025 – Jan 2026',
-    description: 'Built an intelligent mock interview platform that uses AI to generate role-specific technical and behavioral questions. Integrated a deep learning model for evaluating candidate responses in real-time, providing scores and feedback. Designed RESTful APIs with FastAPI and SQLAlchemy for backend logic and data handling.',
+    description:
+      'Built an intelligent mock interview platform that uses AI to generate role-specific technical and behavioral questions. Integrated a deep learning model for evaluating candidate responses in real-time, providing scores and feedback. Designed RESTful APIs with FastAPI and SQLAlchemy for backend logic and data handling. Implemented Retrieval-Augmented Generation (RAG) for context-aware question generation and response evaluation.',
     tech: ['Python', 'FastAPI', 'React.js', 'JavaScript', 'REST APIs', 'SQLAlchemy', 'Deep Learning'],
     icon: 'fas fa-robot',
     color: '#a855f7',
     github: 'https://github.com/kartheekarepalle/AI-interviewer-pro-max',
-    live: 'https://chowdary1-ai-interviewer-version-1.hf.space/login',
+    liveV1: 'https://chowdary1-ai-interviewer-version-1.hf.space/',
+    liveV2: 'https://chowdary1-ai-interviewer-version-2.hf.space/',
   },
   {
     title: 'TuringPass – CAPTCHA Detection System',
@@ -98,10 +100,22 @@ const Projects = () => {
                   <i className="fab fa-github"></i> GitHub
                 </a>
               )}
-              {project.live && (
-                <a href={project.live} className="project-link live" target="_blank" rel="noopener noreferrer">
-                  <i className="fas fa-external-link-alt"></i> Live Demo
-                </a>
+              {/* Custom: AI Interviewer two demo buttons, else default */}
+              {project.title === 'AI-Powered Mock Interview Platform' ? (
+                <>
+                  <a href={project.liveV1} className="project-link live" target="_blank" rel="noopener noreferrer" style={{marginRight: 8}}>
+                    <i className="fas fa-external-link-alt"></i> Version 1
+                  </a>
+                  <a href={project.liveV2} className="project-link live" target="_blank" rel="noopener noreferrer">
+                    <i className="fas fa-external-link-alt"></i> Version 2
+                  </a>
+                </>
+              ) : (
+                project.live && (
+                  <a href={project.live} className="project-link live" target="_blank" rel="noopener noreferrer">
+                    <i className="fas fa-external-link-alt"></i> Live Demo
+                  </a>
+                )
               )}
             </div>
           </div>

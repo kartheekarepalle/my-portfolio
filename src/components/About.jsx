@@ -23,7 +23,7 @@ const About = () => {
         <div className="about-content" data-aos="fade-left">
           <div className="about-card glass-card">
             <h3 className="about-heading">
-              <i className="fas fa-user-graduate"></i> Who I Am
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 12l-10-7-10 7 10 7 10-7z"/><path d="M2 12v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-7"/></svg> Who I Am
             </h3>
             <p>
               Motivated and detail-oriented Computer Science undergraduate at Saveetha Institute 
@@ -33,7 +33,7 @@ const About = () => {
           </div>
           <div className="about-card glass-card">
             <h3 className="about-heading">
-              <i className="fas fa-lightbulb"></i> What I Do
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="8"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="16.24" y1="7.76" x2="17.66" y2="6.34"/><line x1="6.34" y1="17.66" x2="7.76" y2="16.24"/><line x1="7.76" y1="7.76" x2="6.34" y2="6.34"/><line x1="16.24" y1="16.24" x2="17.66" y2="17.66"/></svg> What I Do
             </h3>
             <p>
               I specialize in full-stack web development and AI/ML applications. 
@@ -44,7 +44,7 @@ const About = () => {
           </div>
           <div className="about-card glass-card">
             <h3 className="about-heading">
-              <i className="fas fa-bullseye"></i> My Focus
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg> My Focus
             </h3>
             <p>
               Currently focused on software engineering, artificial intelligence, and building 

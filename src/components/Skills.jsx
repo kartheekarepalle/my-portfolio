@@ -1,43 +1,45 @@
 import React from 'react';
 import './Skills.css';
 
+const CDN = 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons';
+
 const skillCategories = [
   {
     title: 'Programming Languages',
     icon: 'fas fa-terminal',
     skills: [
-      { name: 'Python', icon: 'devicon-python-plain' },
-      { name: 'C', icon: 'devicon-c-plain' },
-      { name: 'C++', icon: 'devicon-cplusplus-plain' },
-      { name: 'SQL', icon: 'fa-solid fa-database', isFa: true },
-      { name: 'JavaScript', icon: 'devicon-javascript-plain' },
+      { name: 'Python', img: `${CDN}/python/python-original.svg` },
+      { name: 'C', img: `${CDN}/c/c-original.svg` },
+      { name: 'C++', img: `${CDN}/cplusplus/cplusplus-original.svg` },
+      { name: 'SQL', faIcon: 'fas fa-database' },
+      { name: 'JavaScript', img: `${CDN}/javascript/javascript-original.svg` },
     ],
   },
   {
     title: 'Frameworks & Tools',
     icon: 'fas fa-tools',
     skills: [
-      { name: 'React.js', icon: 'devicon-react-original' },
-      { name: 'Node.js', icon: 'devicon-nodejs-plain' },
-      { name: 'Express.js', icon: 'devicon-express-original' },
-      { name: 'Tailwind CSS', icon: 'devicon-tailwindcss-original' },
-      { name: 'TensorFlow', icon: 'devicon-tensorflow-original' },
-      { name: 'REST APIs', icon: 'fa-solid fa-plug', isFa: true },
-      { name: 'Git', icon: 'devicon-git-plain' },
-      { name: 'GitHub', icon: 'devicon-github-original' },
+      { name: 'React.js', img: `${CDN}/react/react-original.svg` },
+      { name: 'Node.js', img: `${CDN}/nodejs/nodejs-original.svg` },
+      { name: 'Express.js', img: `${CDN}/express/express-original.svg`, dark: true },
+      { name: 'Tailwind CSS', img: `${CDN}/tailwindcss/tailwindcss-original.svg` },
+      { name: 'TensorFlow', img: `${CDN}/tensorflow/tensorflow-original.svg` },
+      { name: 'REST APIs', faIcon: 'fas fa-plug' },
+      { name: 'Git', img: `${CDN}/git/git-original.svg` },
+      { name: 'GitHub', img: `${CDN}/github/github-original.svg`, dark: true },
     ],
   },
   {
     title: 'Web & Data Science',
     icon: 'fas fa-globe',
     skills: [
-      { name: 'HTML', icon: 'devicon-html5-plain' },
-      { name: 'CSS', icon: 'devicon-css3-plain' },
-      { name: 'NumPy', icon: 'devicon-numpy-original' },
-      { name: 'Pandas', icon: 'devicon-pandas-original' },
-      { name: 'Scikit-learn', icon: 'fa-solid fa-brain', isFa: true },
-      { name: 'Matplotlib', icon: 'fa-solid fa-chart-line', isFa: true },
-      { name: 'Streamlit', icon: 'fa-solid fa-bolt', isFa: true },
+      { name: 'HTML', img: `${CDN}/html5/html5-original.svg` },
+      { name: 'CSS', img: `${CDN}/css3/css3-original.svg` },
+      { name: 'NumPy', img: `${CDN}/numpy/numpy-original.svg` },
+      { name: 'Pandas', img: `${CDN}/pandas/pandas-original.svg`, dark: true },
+      { name: 'Scikit-learn', img: `${CDN}/scikitlearn/scikitlearn-original.svg` },
+      { name: 'Matplotlib', img: `${CDN}/matplotlib/matplotlib-original.svg` },
+      { name: 'Streamlit', img: `${CDN}/streamlit/streamlit-original.svg` },
     ],
   },
 ];
@@ -65,7 +67,15 @@ const Skills = () => {
                   title={skill.name}
                 >
                   <div className="skill-icon-wrapper">
-                    <i className={`${skill.icon} skill-icon`}></i>
+                    {skill.img ? (
+                      <img
+                        src={skill.img}
+                        alt={skill.name}
+                        className={`skill-icon-img${skill.dark ? ' dark-icon' : ''}`}
+                      />
+                    ) : (
+                      <i className={`${skill.faIcon} skill-icon`}></i>
+                    )}
                   </div>
                   <span>{skill.name}</span>
                 </div>
